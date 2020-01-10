@@ -11,10 +11,9 @@
         <th>Title</th>
         <th>Content</th>
         <th>Sent</th>
-        <th>Action</th>
+        <th>Actions</th>
     </tr>
-    <tr th:each="course : ${twitters}">
-        <td th:each="twitter : ${twitters}"></td>
+    <tr th:each="twitter : ${twitters}">
         <td th:text="${twitter.title}"></td>
         <td th:text="${twitter.content}"></td>
         <td th:text="${twitter.sent}"></td>
@@ -22,8 +21,7 @@
             <a th:href="@{/update/{id}(id=${twitter.id})}">Update</a> -
             <a th:href="@{/detail/{id}(id=${twitter.id})}">Details</a> -
             <a th:href="@{/delete/{id}(id=${twitter.id})}">Delete</a>
-        </td>
-    </tr>
+        </td></tr>
 </table>
 </body>
 </html>

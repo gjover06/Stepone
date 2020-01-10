@@ -31,7 +31,7 @@ public class HomeController {
     @PostMapping("/process")
     public String processForm(@Valid Twitter twitter, BindingResult result){
         if (result.hasErrors()){
-            return "redirect:/";
+            return "redirect:/add";
         }
         twitterRepository.save(twitter);
         return "redirect:/";

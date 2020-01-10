@@ -15,7 +15,7 @@
           th:errors="*{title}"></span><br />
     Content :<textarea rows="3" th:field="*{content}" />
     <span th:if="${#fields.hasErrors('content')}"
-          th:errors="*{description}"></span><br />
+          th:errors="*{content}"></span><br />
     Sent :<input type="text" th:field="*{sent}" />
     <span th:if="${#fields.hasErrors('sent')}"
           th:errors="*{sent}"></span><br />
