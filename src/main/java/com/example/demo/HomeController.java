@@ -15,7 +15,7 @@ import javax.validation.Valid;
 public class HomeController {
     @Autowired
     TwitterRepository twitterRepository;
-    private Object BindingResult;
+//    private Object BindingResult;
 
     @RequestMapping("/")
     public String listTwitters(Model model){
@@ -28,7 +28,7 @@ public class HomeController {
         model.addAttribute("twitter", new Twitter());
         return "twitterform";
     }
-    @PostMapping("/process")
+    @PostMapping("/add")
     public String processForm(@Valid Twitter twitter, BindingResult result){
         if (result.hasErrors()){
             return "redirect:/add";
